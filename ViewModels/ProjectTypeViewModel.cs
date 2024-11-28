@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using MiniProjectDesigner.Models;
 
 namespace MiniProjectDesigner.ViewModels
 {
@@ -8,8 +9,14 @@ namespace MiniProjectDesigner.ViewModels
     {
         [ViewPrimaryKey]
         public int Id { get; set; }
-        public string TypeName { get; set; }
+
+        public string TypeNameEn { get; set; }
+
+        public string TypeNameAr { get; set; }
+
         public bool? IsActive { get; set; }
+
+        public DateTime? CreatedDate { get; set; }
         public Type EntityType => typeof(ProjectType);
     }
 }
