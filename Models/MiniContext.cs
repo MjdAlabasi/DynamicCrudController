@@ -3,10 +3,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MiniProjectDesigner.Models.Data
 {
-    public class MiniContext : DbContext
+    public partial class MiniContext : DbContext
     {
-        public MiniContext(DbContextOptions<MiniContext> options) : base(options) { }
+        public MiniContext()
+        {
+        }
 
-        public DbSet<ProjectType> ProjectTypes { get; set; }
+        public MiniContext(DbContextOptions<MiniContext> options)
+            : base(options)
+        {
+        }
     }
 }
